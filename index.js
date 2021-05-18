@@ -12,7 +12,9 @@ const server = http
 				res.write('Got the post');
 				res.end();
 			} else {
-				throw new Error('Unexpected request type');
+				throw new Error(
+					'Unexpected request type. Please send GET or POST requests only.'
+				);
 			}
 		} catch (err) {
 			console.error(err);
